@@ -484,7 +484,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "QCM_driver.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -542,11 +542,11 @@
     ],
     [
       "e3acf5bc-62c9-49c4-a486-1b4e463da910",
-      "VCO IC B 1"
+      "VCO IC 1"
     ],
     [
       "5c822380-dadb-4eed-86aa-1098f9192b9c",
-      "VCO IC B 2"
+      "VCO IC 2"
     ],
     [
       "b4914d1d-fa5a-4774-9369-8b9f36422681",
