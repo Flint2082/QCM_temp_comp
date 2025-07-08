@@ -5,7 +5,7 @@ import sympy as sp
 
 
 ### USER CALIBRATION INPUTS
-fT_1 = -0.000146172
+fT_1 = -0.000146172 
 fT_2 = 6.56675E-07
 fT_3 = -1.77929E-09
 
@@ -30,30 +30,34 @@ fM_0 = (fM_start * 2)/28.5
 
 
 def main():
-    
-    ### USER MEASUREMENT INPUTS
-    fT = 3.734243
-    fM = 9.99985381
+    while True:
+        ### USER MEASUREMENT INPUTS
+        try:
+            fT = float(input("Enter the measured frequency for the temperature mode (Hz): "))
+            fM = float(input("Enter the measured frequency for the mass mode (Hz): "))
+        except ValueError:
+            print("Exiting the program due to invalid input. Please enter numeric values for frequencies.")
+            sys.exit(1)
 
-    
-    # Calculate the differences from the starting values 
-    fT_dif = fT - fT_start
-    fM_dif = fM - fM_start
+        
+        # Calculate the differences from the starting values 
+        fT_dif = fT - fT_start
+        fM_dif = fM - fM_start
 
-    # Calculate the 'd' components for the temperature and mass modes
-    fT_d = fT_start - fT_3 * T_start**3 - fT_2 * T_start**2 - fT_1 * T_start 
-    fM_d = fM_start - fM_3 * T_start**3 - fM_2 * T_start**2 - fM_1 * T_start
-    
-    dT= sp.symbols('dT')      
-    T_dif = sp.solve((fM_3*fT_0 - fT_3*fM_0) * (dT + T_start)**3 + (fM_2*fT_0 - fT_2*fM_0) * (dT + T_start)**2 + (fM_1*fT_0 - fT_1*fM_0) * (dT + T_start) + fM_0*(fT_dif-fT_d) - fT_0*(fM_dif - fM_d), dT)
-    M_dif = -(-fM_dif + (fM_3 * (T_dif[0] + T_start)**3 + fM_2 * (T_dif[0] + T_start)**2 + fM_1 * (T_dif[0] + T_start)) - (fM_3 * (T_start)**3 + fM_2 * (T_start)**2 + fM_1 * (T_start)))/ fM_0
+        # Calculate the 'd' components for the temperature and mass modes
+        fT_d = fT_start - fT_3 * T_start**3 - fT_2 * T_start**2 - fT_1 * T_start 
+        fM_d = fM_start - fM_3 * T_start**3 - fM_2 * T_start**2 - fM_1 * T_start
+        
+        dT= sp.symbols('dT')      
+        T_dif = sp.solve((fM_3*fT_0 - fT_3*fM_0) * (dT + T_start)**3 + (fM_2*fT_0 - fT_2*fM_0) * (dT + T_start)**2 + (fM_1*fT_0 - fT_1*fM_0) * (dT + T_start) + fM_0*(fT_dif-fT_d) - fT_0*(fM_dif - fM_d), dT)
+        M_dif = -(-fM_dif + (fM_3 * (T_dif[0] + T_start)**3 + fM_2 * (T_dif[0] + T_start)**2 + fM_1 * (T_dif[0] + T_start)) - (fM_3 * (T_start)**3 + fM_2 * (T_start)**2 + fM_1 * (T_start)))/ fM_0
 
 
-    # Output the result
-    print("\nThe calculated temperature is:",  T_start+T_dif[0], "°C") 
-    print("The uncompensated SC-cut layer thickness is:", ((fM_dif / fM_0)*1000)/(mat_dens * sens_area), "nanometers")
-    print("The compensated layer thickness is:", (M_dif*1000)/(mat_dens * sens_area), "nanometers")
-    
+        # Output the result
+        print("\nThe calculated temperature is:",  T_start+T_dif[0], "°C") 
+        print("The uncompensated SC-cut layer thickness is:", ((fM_dif / fM_0)*1000)/(mat_dens * sens_area), "nanometers")
+        print("The compensated layer thickness is:", (M_dif*1000)/(mat_dens * sens_area), "nanometers \n\n")
+        
 
 if __name__ == "__main__":
     main()
