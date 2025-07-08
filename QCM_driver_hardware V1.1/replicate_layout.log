@@ -1,0 +1,58 @@
+04-30 12:02:42 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 392:Plugin executed on: 'win32'
+04-30 12:02:42 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 393:Plugin executed with python version: '3.9.16 (main, Oct 13 2023, 05:50:11) [MSC v.1936 64 bit (AMD64)]'
+04-30 12:02:42 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 394:KiCad build version: 7.0.10
+04-30 12:02:42 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 395:Plugin version: 2.1.3
+04-30 12:02:42 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 396:Frame repr: <wx._core.Frame object at 0x000001374369FE50>
+04-30 12:02:42 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 420:Preparing replicator with L4 as a reference
+04-30 12:02:42 com_github_MitjaNemec_ReplicateLayout.replicate_layout 117:getting a list of all footprints on board
+04-30 12:02:42 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 468:source anchor footprint is 'L4'
+Located on: ['VCO circuit 1']
+With filenames: ['VCO_circuit.kicad_sch']
+With sheet_id:['VCO circuit 1']
+04-30 12:02:42 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 475:Corresponding footprints are 
+[('L4', ['VCO circuit 1']), ('L3', ['VCO circuit 2'])]
+04-30 12:02:42 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 487:Showing dialog
+04-30 12:02:43 com_github_MitjaNemec_ReplicateLayout.replicate_layout 424:constructing a list of sheets suitable for replication on level:'VCO circuit 1', file:'VCO_circuit.kicad_sch'
+04-30 12:02:43 com_github_MitjaNemec_ReplicateLayout.replicate_layout 461:suitable sheets are:[['VCO circuit 2']]
+04-30 12:02:43 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1464:Level selected: ['VCO circuit 1']
+04-30 12:02:43 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1299:Filtering list of tracks
+04-30 12:02:43 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 493:Toolbar position: wx.Point(-42, 85)
+04-30 12:02:43 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 498:Dialog position: wx.Point(-481, 85)
+04-30 12:02:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 424:constructing a list of sheets suitable for replication on level:'VCO circuit 1', file:'VCO_circuit.kicad_sch'
+04-30 12:02:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 461:suitable sheets are:[['VCO circuit 2']]
+04-30 12:02:59 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 240:Replicating layout
+04-30 12:02:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 240:Starting replication of sheets: [['VCO circuit 2']]
+on level: ['VCO circuit 1']
+with tracks=True, zone=True, text=True, text=True, intersecting=False, remove=False, locked footprints=False, group_only=False
+04-30 12:02:59 root 332:updating GUI message: 'Preparing for replication'
+04-30 12:02:59 root 337:updating GUI with: 0
+04-30 12:02:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 310:Getting the list of source footprints
+04-30 12:02:59 root 337:updating GUI with: 0
+04-30 12:02:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 320:Getting the list of all the remaining footprints
+04-30 12:02:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 327:Getting source tracks
+04-30 12:02:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1299:Filtering list of tracks
+04-30 12:02:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 331:Getting source zones
+04-30 12:02:59 root 337:updating GUI with: 50
+04-30 12:02:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 335:Getting source text items
+04-30 12:02:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 339:Getting source drawing items
+04-30 12:02:59 root 332:updating GUI message: 'Replicating footprints'
+04-30 12:02:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 806:Replicating footprints
+04-30 12:02:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 813:Replicating footprints on sheet ['VCO circuit 2']
+04-30 12:02:59 root 337:updating GUI with: 22
+04-30 12:02:59 root 332:updating GUI message: 'Replicating tracks'
+04-30 12:02:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 977:Replicating tracks
+04-30 12:02:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 983:Replicating tracks on sheet ['VCO circuit 2']
+04-30 12:02:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 766:Net pairs for sheet ['VCO circuit 2'] :[('Net-(C58-Pad1)', 'Net-(C38-Pad1)'), ('Net-(C63-Pad2)', 'Net-(C43-Pad2)'), ('Net-(C31-Pad1)', 'Net-(C30-Pad1)'), ('Net-(R32-Pad2)', 'Net-(R31-Pad2)'), ('/VCO circuit 1/OUT', '/VCO circuit 2/OUT'), ('Net-(D4-Pad3)', 'Net-(D3-Pad3)'), ('Net-(L4-Pad1)', 'Net-(L1-Pad1)'), ('Net-(C64-Pad2)', 'Net-(C44-Pad2)'), ('/VCO circuit 1/IN', '/VCO circuit 2/IN'), ('/VCO IC B 1/ADJ', '/VCO IC B 2/ADJ'), ('Net-(C56-Pad1)', 'Net-(C36-Pad1)'), ('Net-(C56-Pad2)', 'Net-(C36-Pad2)'), ('Net-(Q2-B)', 'Net-(Q1-B)'), ('Net-(C62-Pad2)', 'Net-(C42-Pad2)'), ('GND', 'GND'), ('+5V', '+5V'), ('Net-(Q2-E)', 'Net-(Q1-E)'), ('Net-(L5-Pad1)', 'Net-(L2-Pad1)'), ('Net-(Q2-C)', 'Net-(Q1-C)')]
+04-30 12:02:59 root 337:updating GUI with: 1
+04-30 12:02:59 root 332:updating GUI message: 'Replicating zones'
+04-30 12:02:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1047:Replicating zones
+04-30 12:02:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1054:Replicating zones on sheet ['VCO circuit 2']
+04-30 12:02:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 766:Net pairs for sheet ['VCO circuit 2'] :[('Net-(C58-Pad1)', 'Net-(C38-Pad1)'), ('Net-(C63-Pad2)', 'Net-(C43-Pad2)'), ('Net-(C31-Pad1)', 'Net-(C30-Pad1)'), ('Net-(R32-Pad2)', 'Net-(R31-Pad2)'), ('/VCO circuit 1/OUT', '/VCO circuit 2/OUT'), ('Net-(D4-Pad3)', 'Net-(D3-Pad3)'), ('Net-(L4-Pad1)', 'Net-(L1-Pad1)'), ('Net-(C64-Pad2)', 'Net-(C44-Pad2)'), ('/VCO circuit 1/IN', '/VCO circuit 2/IN'), ('/VCO IC B 1/ADJ', '/VCO IC B 2/ADJ'), ('Net-(C56-Pad1)', 'Net-(C36-Pad1)'), ('Net-(C56-Pad2)', 'Net-(C36-Pad2)'), ('Net-(Q2-B)', 'Net-(Q1-B)'), ('Net-(C62-Pad2)', 'Net-(C42-Pad2)'), ('GND', 'GND'), ('+5V', '+5V'), ('Net-(Q2-E)', 'Net-(Q1-E)'), ('Net-(L5-Pad1)', 'Net-(L2-Pad1)'), ('Net-(Q2-C)', 'Net-(Q1-C)')]
+04-30 12:02:59 root 337:updating GUI with: 86
+04-30 12:02:59 root 332:updating GUI message: 'Replicating text'
+04-30 12:02:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1136:Replicating text
+04-30 12:02:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1143:Replicating text on sheet ['VCO circuit 2']
+04-30 12:02:59 root 332:updating GUI message: 'Replicating drawings'
+04-30 12:02:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1187:Replicating drawings
+04-30 12:02:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1193:Replicating drawings on sheet ['VCO circuit 2']
+04-30 12:03:01 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 256:Replication complete
