@@ -30,6 +30,11 @@ sens_area = 32.0E-6  # m^2
 fT_0 = (fT_start * 2)/28.5 
 fM_0 = (fM_start * 2)/28.5 
 
+# Coefficients for the cubic equation a*T_dif^3 + b*T_dif^2 + c*T_dif + d = 0
+# with d calculated later
+a = (fM_3*fT_0 - fT_3*fM_0)
+b = (fM_2*fT_0 - fT_2*fM_0)
+c = (fM_1*fT_0 - fT_1*fM_0) 
 
 def main():
     while True:
@@ -53,10 +58,7 @@ def main():
         fT_d = fT_start - fT_3 * T_start**3 - fT_2 * T_start**2 - fT_1 * T_start 
         fM_d = fM_start - fM_3 * T_start**3 - fM_2 * T_start**2 - fM_1 * T_start
         
-        # Coefficients for the cubic equation a*T_dif^3 + b*T_dif^2 + c*T_dif + d = 0
-        a = (fM_3*fT_0 - fT_3*fM_0)
-        b = (fM_2*fT_0 - fT_2*fM_0)
-        c = (fM_1*fT_0 - fT_1*fM_0) 
+        # d coefficient for the cubic equation a*T_dif^3 + b*T_dif^2 + c*T_dif + d = 0
         d = fM_0*(fT_dif-fT_d) - fT_0*(fM_dif - fM_d)
         
         # calculate the roots of the cubic equation
